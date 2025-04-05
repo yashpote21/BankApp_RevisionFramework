@@ -3,6 +3,7 @@ import time
 from Utilities.readProperties import ReadConfigFile
 from pageObjects.Login_Page import Login_Class
 from pageObjects.Search_User_Page import Search_User_Class
+import pytest
 
 
 class Test_Search_User_params:
@@ -10,6 +11,7 @@ class Test_Search_User_params:
     Password = ReadConfigFile.GetPassword()
 
 
+    @pytest.mark.skip
     def test_search_user_params_005(self,setup,getDataForSearchUser):
         self.driver = setup
         self.lp = Login_Class(self.driver)

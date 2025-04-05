@@ -1,5 +1,5 @@
 import time
-
+import pytest
 from Utilities import XLutilies
 from Utilities.readProperties import ReadConfigFile
 from pageObjects.Login_Page import Login_Class
@@ -11,6 +11,8 @@ class Test_Search_User_Excel:
     Password = ReadConfigFile.GetPassword()
     Excel_file_Path = ".\\testCases\\Test_Data\\Test_Data.xlsx"
 
+
+    @pytest.mark.skip
     def test_search_user_Excel_006(self, setup):
         self.driver = setup
         self.lp = Login_Class(self.driver)

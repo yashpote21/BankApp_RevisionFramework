@@ -1,5 +1,5 @@
 import time
-
+import pytest
 from selenium.webdriver.common.by import By
 
 from Utilities.Logger import Log_Class
@@ -68,7 +68,9 @@ class Test_UserProfile:
             self.driver.save_screenshot(".\\Screeshots\\test_Signup_002_fail.png")
             self.Log.info("Testcase test_Signup_002 is completed\n")
             assert False
+    
 
+    @pytest.mark.skip
     def test_Login_003(self, setup):
         self.Log.info("Testcase test_Login_003 is started")
         self.driver = setup

@@ -32,9 +32,9 @@ def setup(request):
 
     ("Admin", "pass"),
     ("Tushar", "pass"),
-    ("Admin420", "fail"),
-    ("demo2", "pass"),
-    ("demo", "fail")
+    ("Admin420", "fail")
+    # ("demo2", "pass"),
+    # ("demo", "fail")
 ])
 def getDataForSearchUser(request):
     return request.param

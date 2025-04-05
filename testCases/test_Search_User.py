@@ -19,7 +19,7 @@ class Test_Search_User:
         self.lp.Click_Login_Button()
         self.su = Search_User_Class(self.driver)
         self.su.Click_Link_User_Management()
-        self.su.Enter_UserName("Tushar1")
+        self.su.Enter_UserName("Tushar")
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         #time.sleep(5)
         self.su.Click_Search_User_Button()
